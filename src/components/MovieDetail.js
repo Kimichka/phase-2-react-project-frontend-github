@@ -19,6 +19,7 @@ const MovieDetail = () => {
       <p>Genre: {movie.genre}</p>
       <p>Series: {movie.series}</p>
       <p>Rating: {movie.rating}</p>
+      <p>Description: {movie.description}</p>
     </div>
   );
 }
