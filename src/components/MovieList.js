@@ -1,5 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
+
+const Movie = ({ movie }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  return (
+    <div>
+      <h2>{movie.title}</h2>
+      <p>Genre: {movie.genre}</p>
+      <p>Series: {movie.series}</p>
+      <p>Rating: {movie.rating}</p>
+      <button onClick={() => setIsExpanded(!isExpanded)}>
+        {isExpanded ? 'Hide Details' : 'Show Details'}
+      </button>
+      {isExpanded && <p>Description: {movie.description}</p>}
+    </div>
+  );
+}
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -10,21 +27,12 @@ const MovieList = () => {
       .then(data => setMovies(data));
   }, []);
 
-  if (movies.length === 0) return <div>Loading...</div>;
-
   return (
     <div>
-      <h1>Movie List</h1>
       {movies.map(movie => (
-        <div key={movie.id}>
-          <h2>{movie.title}</h2>
-          <p>Genre: {movie.genre}</p>
-          <p>Series: {movie.series}</p>
-          <p>Rating: {movie.rating}</p>
-          
-          <Link to={`/movies/${movie.id}`}>More Details</Link>
-        </div>
+        <Movie key={movie.id} movie={movie} />
       ))}
+      <Outlet />
     </div>
   );
 }
