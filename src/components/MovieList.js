@@ -8,7 +8,7 @@ const Movie = ({ movie }) => {
     <div>
       <h2>{movie.title}</h2>
       <p>Genre: {movie.genre}</p>
-      <p>Series: {movie.series}</p>
+      <p>Year: {movie.year}</p>
       <p>Rating: {movie.rating}</p>
       <button onClick={() => setIsExpanded(!isExpanded)}>
         {isExpanded ? 'Hide Details' : 'Show Details'}

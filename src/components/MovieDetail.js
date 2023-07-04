@@ -17,7 +17,7 @@ const MovieDetail = () => {
     <div>
       <h1>{movie.title}</h1>
       <p>Genre: {movie.genre}</p>
-      <p>Series: {movie.series}</p>
+      <p>Year: {movie.year}</p>
       <p>Rating: {movie.rating}</p>
       <p>Description: {movie.description}</p>
     </div>
