@@ -1,4 +1,4 @@
-## Arnold Schwarzenegger Movies
+## Arnold Schwarzenegger Movies and Series
 
 This is a brief guide on how to fork, clone, and run the project repository.
 
@@ -25,6 +25,6 @@ https://github.com/Kimichka/phase-2-react-project-backend
 
 ### Description:
 
-The website showcases 23 Arnold Schwarzenegger movies. You can click on the movies to see them. If you want to view the description of a movie, click on the "Show Detail" button.
+The website showcases Arnold Schwarzenegger movies and series. You can click on the movies to see them. If you want to view the description of a movie, click on the "Show Detail" button.
 
 Happy coding!

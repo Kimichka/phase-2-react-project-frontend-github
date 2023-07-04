@@ -13,7 +13,7 @@ const Header = ({ showMovies, setShowMovies, setShowSeries }) => {
   return (
     <header className="header" style={{ backgroundColor: "#333", padding: "20px", color: "#fff" }}>
       <div className="header-title" style={{ fontSize: "24px", fontWeight: "bold" }}>
-        Arnold Schwarzenegger Movies
+        Arnold Schwarzenegger Movies and Series
       </div>
       <nav className="header-nav" style={{ display: "flex" }}>
         <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={handleHomeClick}>
