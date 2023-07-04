@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Header = ({ showMovies, setShowMovies }) => {
+const Header = ({ showMovies, setShowMovies, setShowSeries }) => { 
   const handleHomeClick = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
     setShowMovies(false);
+    setShowSeries(false); 
   };
 
   return (
@@ -18,9 +19,12 @@ const Header = ({ showMovies, setShowMovies }) => {
         <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={handleHomeClick}>
           Home
         </button>
-        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => setShowMovies(true)}>
+        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(true); setShowSeries(false); }}>
           Movies
         </button>
+        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(false); setShowSeries(true); }}>
+          Series
+        </button> 
       </nav>
     </header>
   );
