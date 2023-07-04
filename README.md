@@ -19,7 +19,7 @@ https://github.com/Kimichka/phase-2-react-project-backend
 
 4. Install the JSON server and run it.
 
-5. Then run the following command, and it will open the webpage:
+5. Then run the following command in the front-end, and it will open the webpage:
 
 #### npm start
 
