@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header-nav {
+    display: flex;
+  }
+  
+  .header-link {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .header-link:first-child {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-left: auto;
+  }
+  
