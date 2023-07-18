@@ -17,7 +17,9 @@ To run locally, please follow these steps:
 
 https://github.com/Kimichka/phase-2-react-project-backend
 
-4. Install the JSON server and run it.
+4. Install the JSON server and run it on server 3001 using the command below:
+
+#### json-server --watch db.json --port 3001
 
 5. Then run the following command in the front-end, and it will open the webpage:
 
