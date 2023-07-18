@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
+import CommentSection from './CommentSection';
 
 const Movie = ({ movie }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div>
+    <div className="movie-card">
       <h2>{movie.title}</h2>
       <p>Genre: {movie.genre}</p>
       <p>Year Released: {movie.year}</p>
@@ -14,9 +14,10 @@ const Movie = ({ movie }) => {
         {isExpanded ? 'Hide Details' : 'Show Details'}
       </button>
       {isExpanded && <p>Description: {movie.description}</p>}
+      <CommentSection id={movie.id} type="movies" />
     </div>
   );
-}
+};
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -28,13 +29,12 @@ const MovieList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="movies-container">
       {movies.map(movie => (
         <Movie key={movie.id} movie={movie} />
       ))}
-      <Outlet />
     </div>
   );
-}
+};
 
 export default MovieList;

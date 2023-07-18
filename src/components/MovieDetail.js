@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import CommentSection from './CommentSection';
 
 const MovieDetail = () => {
   const { id } = useParams();
@@ -20,6 +21,7 @@ const MovieDetail = () => {
       <p>Year Released: {movie.year}</p>
       <p>Rating: {movie.rating}</p>
       <p>Description: {movie.description}</p>
+      <CommentSection id={id} />
     </div>
   );
 }
