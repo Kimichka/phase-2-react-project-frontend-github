@@ -21,7 +21,7 @@ const MovieDetail = () => {
       <p>Year Released: {movie.year}</p>
       <p>Rating: {movie.rating}</p>
       <p>Description: {movie.description}</p>
-      <CommentSection id={id} />
+      <CommentSection id={id} type="movies" />
     </div>
   );
 }

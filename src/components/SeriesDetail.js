@@ -21,7 +21,7 @@ const SeriesDetail = () => {
       <p>Year Released: {series.year}</p>
       <p>Rating: {series.rating}</p>
       <p>Description: {series.description}</p>
-      <CommentSection id={id} />
+      <CommentSection id={id} type="series" />
     </div>
   );
 }

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import CommentSection from './CommentSection';
+import { Link } from 'react-router-dom';
 
 const Series = ({ series }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="series-card">
-      <h2>{series.title}</h2>
+      <h2><Link to={`/series/${series.id}`}>{series.title}</Link></h2>
       <p>Genre: {series.genre}</p>
       <p>Year Released: {series.year}</p>
       <p>Rating: {series.rating}</p>
@@ -25,10 +26,9 @@ const SeriesList = () => {
   useEffect(() => {
     fetch('http://localhost:3001/series')
       .then((res) => res.json())
-      .then((data) => {
-        setSeries(data);
-      });
-  }, []);
+      .then((data) => {setSeries(data);});
+      
+    },[]);
 
   return (
     <div className="series-container">

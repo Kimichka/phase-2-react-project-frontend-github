@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import CommentSection from './CommentSection';
+import { Link } from 'react-router-dom';
 
 const Movie = ({ movie }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="movie-card">
-      <h2>{movie.title}</h2>
+      <h2><Link to={`/movie/${movie.id}`}>{movie.title}</Link></h2>
       <p>Genre: {movie.genre}</p>
       <p>Year Released: {movie.year}</p>
       <p>Rating: {movie.rating}</p>

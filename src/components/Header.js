@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = ({ showMovies, setShowMovies, setShowSeries }) => { 
   const handleHomeClick = () => {
@@ -16,15 +17,16 @@ const Header = ({ showMovies, setShowMovies, setShowSeries }) => {
         Arnold Schwarzenegger Movies and Series
       </div>
       <nav className="header-nav" style={{ display: "flex" }}>
-        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={handleHomeClick}>
+       
+        <Link className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none" }} to="/home">
           Home
-        </button>
-        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(true); setShowSeries(false); }}>
+        </Link>
+        <Link to="/movies" className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(true); setShowSeries(false); }}>
           Movies
-        </button>
-        <button className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(false); setShowSeries(true); }}>
+        </Link>
+        <Link to="/series" className="header-link" style={{ marginLeft: "10px", color: "#fff", textDecoration: "none", background: "none", border: "none" }} onClick={() => { setShowMovies(false); setShowSeries(true); }}>
           Series
-        </button> 
+        </Link> 
       </nav>
     </header>
   );
